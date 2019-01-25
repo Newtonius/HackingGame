@@ -11,7 +11,7 @@
 [sub_resource type="Theme" id=1]
 
 
-[node name="Node" type="Node" index="0"]
+[node name="Node" type="Node"]
 
 script = ExtResource( 1 )
 
@@ -94,6 +94,8 @@ texture_hover = ExtResource( 7 )
 _sections_unfolded = [ "Textures" ]
 
 [connection signal="pressed" from="StartButton" to="." method="_on_StartButton_pressed"]
+
+[connection signal="pressed" from="OptionsButton" to="." method="_on_OptionsButton_pressed"]
 
 [connection signal="pressed" from="ExitButton" to="." method="_on_ExitButton_pressed"]
 
