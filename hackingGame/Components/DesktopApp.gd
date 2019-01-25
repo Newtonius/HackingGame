@@ -8,4 +8,5 @@ func _ready():
 	pass
 
 func InputEventArea2D(viewport, event, shape_idx):
+	var here
 	pass # replace with function body
