@@ -1,12 +1,10 @@
 extends Node
 
-var alexSucksDick
+onready var AppText = $Label.text
 
 func _ready():
-	# Called when the node is added to the scene for the first time.
-	# Initialization here
-	pass
+	$Label.max_lines_visible = 1
 
 func InputEventArea2D(viewport, event, shape_idx):
-	var here
-	pass # replace with function body
+	if event.is_action_pressed("MouseLeftClick"):
+		$Label.max_lines_visible = 3
