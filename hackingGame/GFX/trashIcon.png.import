@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/trashBin.png-8738d92b3001636186ab0086e31369ea.stex"
+path="res://.import/trashIcon.png-bd7899ea1bc6de646435fa5c935a4b13.stex"
 
 [deps]
 
-source_file="res://GFX/trashBin.png"
-dest_files=[ "res://.import/trashBin.png-8738d92b3001636186ab0086e31369ea.stex" ]
+source_file="res://GFX/trashIcon.png"
+dest_files=[ "res://.import/trashIcon.png-bd7899ea1bc6de646435fa5c935a4b13.stex" ]
 
 [params]
 
