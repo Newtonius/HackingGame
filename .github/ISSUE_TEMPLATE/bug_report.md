@@ -7,17 +7,17 @@ assignees: ''
 
 ---
 
-#Description:
+# Description:
 
 
-#Repro steps:
+# Repro steps:
 
 
-#Expected behavior:
+# Expected behavior:
 
 
-#Version:
+# Version:
 
 
-#Device:
+# Device:
 N/A

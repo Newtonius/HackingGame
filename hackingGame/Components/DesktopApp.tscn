@@ -1,15 +1,24 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Components/DesktopApp.gd" type="Script" id=1]
 [ext_resource path="res://GFX/hoverAppHighlight.png" type="Texture" id=2]
 [ext_resource path="res://GFX/icon.png" type="Texture" id=3]
+[ext_resource path="res://fonts/Montserrat-Regular.ttf" type="DynamicFontData" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
 extents = Vector2( 34.408, 33.9556 )
 
-[node name="DesktopApp" type="Node2D"]
+[sub_resource type="DynamicFont" id=2]
+
+size = 12
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 4 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[node name="DesktopApp" type="Node2D" index="0"]
 
 scale = Vector2( 0.6, 0.6 )
 script = ExtResource( 1 )
@@ -51,9 +60,9 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = -45.0
-margin_top = 39.0
+margin_top = 34.0
 margin_right = 45.0
-margin_bottom = 89.0
+margin_bottom = 88.0
 rect_min_size = Vector2( 64, 50 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = true
@@ -61,13 +70,14 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
+custom_fonts/font = SubResource( 2 )
 text = "Default app text goes here and clips after 3 lines hopefully if its works"
 align = 1
 autowrap = true
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = 3
-_sections_unfolded = [ "Rect" ]
+_sections_unfolded = [ "Rect", "custom_fonts" ]
 
 [connection signal="input_event" from="Area2D" to="." method="InputEventArea2D"]
 
