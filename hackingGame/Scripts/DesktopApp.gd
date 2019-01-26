@@ -16,6 +16,7 @@ func InputEventArea2D(viewport, event, shape_idx):
 
 
 func MouseEnterArea2d():
+	print("Entered")
 	if m_IsPressed != true:
 		$Area2D/Hover.visible = true
 
