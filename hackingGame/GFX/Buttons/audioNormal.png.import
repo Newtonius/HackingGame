@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/optionsNormal.png-bf8117b1ea5d030c261bc5e222962ba7.stex"
+path="res://.import/audioNormal.png-b42403851d7942e377222884e6a5a040.stex"
 
 [deps]
 
-source_file="res://GFX/optionsNormal.png"
-dest_files=[ "res://.import/optionsNormal.png-bf8117b1ea5d030c261bc5e222962ba7.stex" ]
+source_file="res://GFX/Buttons/audioNormal.png"
+dest_files=[ "res://.import/audioNormal.png-b42403851d7942e377222884e6a5a040.stex" ]
 
 [params]
 

@@ -14,17 +14,17 @@ func _ready():
 #	# Update game logic here.
 #	pass
 
+func _on_GraphicsButton_pressed():
+	get_tree().change_scene("res://GraphicsMenu.tscn")
 
-func _on_StartButton_pressed():
-	get_tree().change_scene("res://PrimaryScreen.tscn")
+func _on_AudioButton_pressed():
+	get_tree().change_scene("res://AudioMenu.tscn")
 
-func _on_OptionsButton_pressed():
-	get_tree().change_scene("res://OptionsMenu.tscn")
-
-func _on_ExitButton_pressed():
-	get_tree().quit()
-
+func _on_BackButton_pressed():
+	get_tree().change_scene("res://MainMenu.tscn")
+	
 func _unhandled_input(event):
 	if event is InputEventKey:
 		if event.pressed and event.scancode == KEY_ESCAPE:
-			get_tree().quit()
+			get_tree().change_scene("res://MainMenu.tscn")
+	
