@@ -1,7 +1,7 @@
 ---
 name: Create
 about: Something that needs to be created, usually from scratch.
-title: "[TODO] Create "
+title: "[TODO] Create"
 labels: Create
 assignees: ''
 
