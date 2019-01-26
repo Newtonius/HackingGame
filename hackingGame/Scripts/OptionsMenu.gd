@@ -21,5 +21,10 @@ func _on_AudioButton_pressed():
 	get_tree().change_scene("res://AudioMenu.tscn")
 
 func _on_BackButton_pressed():
-	event.is_action_pressed("ui_cancel")
+	get_tree().change_scene("res://MainMenu.tscn")
+	
+func _unhandled_input(event):
+	if event is InputEventKey:
+		if event.pressed and event.scancode == KEY_ESCAPE:
+			get_tree().change_scene("res://MainMenu.tscn")
 	
