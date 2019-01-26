@@ -1,62 +1,27 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://Apps.gd" type="Script" id=1]
-[ext_resource path="res://Objects/RecycleBin.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Objects/InternetBrowser.tscn" type="PackedScene" id=3]
-[ext_resource path="res://GridManager.gd" type="Script" id=4]
+[ext_resource path="res://GFX/whiteBG.png" type="Texture" id=1]
+[ext_resource path="res://Apps.gd" type="Script" id=2]
+[ext_resource path="res://Objects/RecycleBin.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Objects/InternetBrowser.tscn" type="PackedScene" id=4]
 
 [node name="Main" type="Node" index="0"]
 
-[node name="Apps" type="Node" parent="." index="0"]
+[node name="Background" type="Sprite" parent="." index="0"]
 
-script = ExtResource( 1 )
+position = Vector2( 630.686, 361.445 )
+texture = ExtResource( 1 )
 
-[node name="RecycleBin" parent="Apps" index="0" instance=ExtResource( 2 )]
+[node name="Apps" type="Node" parent="." index="1"]
+
+script = ExtResource( 2 )
+
+[node name="RecycleBin" parent="Apps" index="0" instance=ExtResource( 3 )]
 
 position = Vector2( 30, 25 )
 
-[node name="InternetBrowser" parent="Apps" index="1" instance=ExtResource( 3 )]
+[node name="InternetBrowser" parent="Apps" index="1" instance=ExtResource( 4 )]
 
 position = Vector2( 30, 100 )
-
-[node name="InternetBrowser2" parent="Apps" index="2" instance=ExtResource( 3 )]
-
-position = Vector2( 30, 175 )
-
-[node name="InternetBrowser3" parent="Apps" index="3" instance=ExtResource( 3 )]
-
-position = Vector2( 30, 325 )
-
-[node name="InternetBrowser4" parent="Apps" index="4" instance=ExtResource( 3 )]
-
-position = Vector2( 30, 250 )
-
-[node name="InternetBrowser5" parent="Apps" index="5" instance=ExtResource( 3 )]
-
-position = Vector2( 30, 400 )
-
-[node name="InternetBrowser6" parent="Apps" index="6" instance=ExtResource( 3 )]
-
-position = Vector2( 30, 475 )
-
-[node name="InternetBrowser7" parent="Apps" index="7" instance=ExtResource( 3 )]
-
-position = Vector2( 30, 550 )
-
-[node name="InternetBrowser8" parent="Apps" index="8" instance=ExtResource( 3 )]
-
-position = Vector2( 30, 625 )
-
-[node name="InternetBrowser9" parent="Apps" index="9" instance=ExtResource( 3 )]
-
-position = Vector2( 85, 25 )
-
-[node name="InternetBrowser10" parent="Apps" index="10" instance=ExtResource( 3 )]
-
-position = Vector2( 85, 100 )
-
-[node name="GridManager" type="Node" parent="." index="1"]
-
-script = ExtResource( 4 )
 
 
