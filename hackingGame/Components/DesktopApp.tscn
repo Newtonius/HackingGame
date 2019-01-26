@@ -1,24 +1,50 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Components/DesktopApp.gd" type="Script" id=1]
-[ext_resource path="res://GFX/icon.png" type="Texture" id=2]
+[ext_resource path="res://GFX/hoverAppHighlight.png" type="Texture" id=2]
+[ext_resource path="res://GFX/icon.png" type="Texture" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
 extents = Vector2( 34.408, 33.9556 )
 
-[node name="DesktopApp" type="Node2D" index="0"]
+[node name="DesktopApp" type="Node2D"]
 
 scale = Vector2( 0.5, 0.5 )
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Sprite" type="Sprite" parent="." index="0"]
+[node name="Area2D" type="Area2D" parent="." index="0"]
 
+position = Vector2( 0.0633092, 26.1738 )
+scale = Vector2( 1.31966, 1.81793 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+_sections_unfolded = [ "Collision", "Pickable" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" index="0"]
+
+shape = SubResource( 1 )
+
+[node name="Hover" type="Sprite" parent="Area2D" index="1"]
+
+show_behind_parent = true
+position = Vector2( 0.101772, 0.164236 )
+scale = Vector2( 1.06512, 1.05595 )
 texture = ExtResource( 2 )
+_sections_unfolded = [ "Visibility" ]
 
-[node name="Label" type="Label" parent="." index="1"]
+[node name="Icon" type="Sprite" parent="." index="1"]
+
+texture = ExtResource( 3 )
+
+[node name="Label" type="Label" parent="." index="2"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -43,23 +69,10 @@ lines_skipped = 0
 max_lines_visible = 3
 _sections_unfolded = [ "Rect" ]
 
-[node name="Area2D" type="Area2D" parent="." index="2"]
-
-position = Vector2( 0.0633092, 26.1738 )
-scale = Vector2( 1.31966, 1.81793 )
-input_pickable = true
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-audio_bus_override = false
-audio_bus_name = "Master"
-_sections_unfolded = [ "Collision", "Pickable" ]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" index="0"]
-
-shape = SubResource( 1 )
-
 [connection signal="input_event" from="Area2D" to="." method="InputEventArea2D"]
+
+[connection signal="mouse_entered" from="Area2D" to="." method="MouseEnterArea2d"]
+
+[connection signal="mouse_exited" from="Area2D" to="." method="MouseExitArea2D"]
 
 
