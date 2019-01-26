@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/startNormal.png-8767d6017c0bc237b39b917c51953e62.stex"
+path="res://.import/backHover.png-8afc8bb5acc86b7a280566649929e269.stex"
 
 [deps]
 
-source_file="res://GFX/startNormal.png"
-dest_files=[ "res://.import/startNormal.png-8767d6017c0bc237b39b917c51953e62.stex" ]
+source_file="res://GFX/Buttons/backHover.png"
+dest_files=[ "res://.import/backHover.png-8afc8bb5acc86b7a280566649929e269.stex" ]
 
 [params]
 

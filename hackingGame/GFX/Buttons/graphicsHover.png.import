@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/optionsHover.png-0e9ae9581be82e41696d7f325ea58e97.stex"
+path="res://.import/graphicsHover.png-bf29c7d5b9d20a4966268b6c18d25788.stex"
 
 [deps]
 
-source_file="res://GFX/optionsHover.png"
-dest_files=[ "res://.import/optionsHover.png-0e9ae9581be82e41696d7f325ea58e97.stex" ]
+source_file="res://GFX/Buttons/graphicsHover.png"
+dest_files=[ "res://.import/graphicsHover.png-bf29c7d5b9d20a4966268b6c18d25788.stex" ]
 
 [params]
 
