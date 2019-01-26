@@ -14,3 +14,5 @@ func _unhandled_input(event):
 		var apps = get_children()
 		for app in apps:
 			app.SetIsPressed(false)
+	if event.pressed and event.scancode == KEY_ESCAPE:
+		 get_tree().change_scene("res://OptionsMenu.tscn")

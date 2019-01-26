@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/exitHover.png-83ffcc56e804031178a9574f68e9d423.stex"
+path="res://.import/graphicsNormal.png-0308da36d9e86090bf1afdf3102b4044.stex"
 
 [deps]
 
-source_file="res://GFX/exitHover.png"
-dest_files=[ "res://.import/exitHover.png-83ffcc56e804031178a9574f68e9d423.stex" ]
+source_file="res://GFX/Buttons/graphicsNormal.png"
+dest_files=[ "res://.import/graphicsNormal.png-0308da36d9e86090bf1afdf3102b4044.stex" ]
 
 [params]
 

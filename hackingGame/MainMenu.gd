@@ -24,5 +24,7 @@ func _on_OptionsButton_pressed():
 func _on_ExitButton_pressed():
 	get_tree().quit()
 
-func _input(event):
-	event.is_action_pressed("ui_cancel") 
+func _unhandled_input(event):
+	if event is InputEventKey:
+		if event.pressed and event.scancode == KEY_ESCAPE:
+			get_tree().quit() 
