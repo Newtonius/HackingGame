@@ -19,42 +19,6 @@ position = Vector2( 30, 25 )
 
 position = Vector2( 30, 100 )
 
-[node name="InternetBrowser2" parent="Apps" index="2" instance=ExtResource( 3 )]
-
-position = Vector2( 30, 175 )
-
-[node name="InternetBrowser3" parent="Apps" index="3" instance=ExtResource( 3 )]
-
-position = Vector2( 30, 325 )
-
-[node name="InternetBrowser4" parent="Apps" index="4" instance=ExtResource( 3 )]
-
-position = Vector2( 30, 250 )
-
-[node name="InternetBrowser5" parent="Apps" index="5" instance=ExtResource( 3 )]
-
-position = Vector2( 30, 400 )
-
-[node name="InternetBrowser6" parent="Apps" index="6" instance=ExtResource( 3 )]
-
-position = Vector2( 30, 475 )
-
-[node name="InternetBrowser7" parent="Apps" index="7" instance=ExtResource( 3 )]
-
-position = Vector2( 30, 550 )
-
-[node name="InternetBrowser8" parent="Apps" index="8" instance=ExtResource( 3 )]
-
-position = Vector2( 30, 625 )
-
-[node name="InternetBrowser9" parent="Apps" index="9" instance=ExtResource( 3 )]
-
-position = Vector2( 85, 25 )
-
-[node name="InternetBrowser10" parent="Apps" index="10" instance=ExtResource( 3 )]
-
-position = Vector2( 85, 100 )
-
 [node name="GridManager" type="Node" parent="." index="1"]
 
 script = ExtResource( 4 )
