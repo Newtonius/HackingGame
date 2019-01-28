@@ -9,7 +9,7 @@
 [ext_resource path="res://Objects/VisualScriptStudio.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Objects/PoodleMaps.tscn" type="PackedScene" id=8]
 
-[node name="Main" type="Node" index="0"]
+[node name="Main" type="Node"]
 
 [node name="Background" type="Sprite" parent="." index="0"]
 
