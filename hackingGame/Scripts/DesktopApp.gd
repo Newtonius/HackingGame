@@ -7,16 +7,6 @@ func _ready():
 	$Label.max_lines_visible = 1
 	$Hover.visible = false
 
-func ButtonPressed(event):
-	if event.is_action_pressed("MouseLeftClick"):
-		if event.doubleclick:
-			print("double click")
-		var apps = get_parent().get_children()
-		for app in apps:
-			if app != self:
-				app.SetIsPressed(false)
-		SetIsPressed(true)
-
 func MouseEnter():
 	if m_IsPressed != true:
 		$Hover.visible = true
@@ -38,7 +28,8 @@ func SetIsPressed(value):
 func InputPressed(event):
 	if event.is_action_pressed("MouseLeftClick"):
 		if event.doubleclick:
-			print("double click")
+			$Window.popup()
+			print("popup enabled")
 		var apps = get_parent().get_children()
 		for app in apps:
 			if app != self:

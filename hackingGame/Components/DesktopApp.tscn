@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Themes/Parts/ButtonNormal.tres" type="StyleBox" id=1]
 [ext_resource path="res://Scripts/DesktopApp.gd" type="Script" id=2]
 [ext_resource path="res://GFX/hoverAppHighlight.png" type="Texture" id=3]
 [ext_resource path="res://icon.png" type="Texture" id=4]
 [ext_resource path="res://Themes/BaseTheme.tres" type="Theme" id=5]
+[ext_resource path="res://Components/WindowBase.tscn" type="PackedScene" id=6]
 
 [node name="DesktopApp" type="Button"]
 
@@ -105,6 +106,10 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = 3
 _sections_unfolded = [ "Rect", "Size Flags", "Theme" ]
+
+[node name="Window" parent="." index="3" instance=ExtResource( 6 )]
+
+visible = false
 
 [connection signal="gui_input" from="." to="." method="InputPressed"]
 

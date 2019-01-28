@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=9 format=2]
+[gd_resource type="Theme" load_steps=13 format=2]
 
 [ext_resource path="res://Themes/Parts/DynamicFont.tres" type="DynamicFont" id=1]
 [ext_resource path="res://Themes/Parts/ButtonDisabled.tres" type="StyleBox" id=2]
@@ -6,7 +6,10 @@
 [ext_resource path="res://Themes/Parts/ButtonNormal.tres" type="StyleBox" id=4]
 [ext_resource path="res://Themes/Parts/ButtonPressed.tres" type="StyleBox" id=5]
 [ext_resource path="res://fonts/Montserrat-Regular.ttf" type="DynamicFontData" id=6]
-[ext_resource path="res://fonts/DynamicFont.tres" type="DynamicFont" id=7]
+[ext_resource path="res://GFX/Buttons/DefaultHover.png" type="Texture" id=7]
+[ext_resource path="res://GFX/Buttons/DefaultPressed.png" type="Texture" id=8]
+[ext_resource path="res://Themes/Parts/WindowDialogPanel.tres" type="StyleBox" id=9]
+[ext_resource path="res://fonts/DynamicFont.tres" type="DynamicFont" id=10]
 
 [sub_resource type="DynamicFont" id=1]
 
@@ -16,9 +19,17 @@ use_filter = true
 font_data = ExtResource( 6 )
 _sections_unfolded = [ "Settings" ]
 
+[sub_resource type="DynamicFont" id=2]
+
+size = 10
+use_mipmaps = false
+use_filter = true
+font_data = ExtResource( 6 )
+_sections_unfolded = [ "Settings" ]
+
 [resource]
 
-default_font = ExtResource( 7 )
+default_font = ExtResource( 10 )
 Button/colors/font_color = Color( 0.878431, 0.878431, 0.878431, 1 )
 Button/colors/font_color_disabled = Color( 0, 0, 0, 0.352941 )
 Button/colors/font_color_hover = Color( 0, 0, 0, 1 )
@@ -60,5 +71,14 @@ ToolButton/styles/focus = null
 ToolButton/styles/hover = ExtResource( 3 )
 ToolButton/styles/normal = ExtResource( 4 )
 ToolButton/styles/pressed = ExtResource( 5 )
-_sections_unfolded = [ "Button", "Button/styles" ]
+WindowDialog/colors/title_color = Color( 0, 0, 0, 1 )
+WindowDialog/constants/close_h_ofs = 18
+WindowDialog/constants/close_v_ofs = 18
+WindowDialog/constants/scaleborder_size = 4
+WindowDialog/constants/title_height = 20
+WindowDialog/fonts/title_font = SubResource( 2 )
+WindowDialog/icons/close = ExtResource( 7 )
+WindowDialog/icons/close_highlight = ExtResource( 8 )
+WindowDialog/styles/panel = ExtResource( 9 )
+_sections_unfolded = [ "WindowDialog", "WindowDialog/colors", "WindowDialog/constants", "WindowDialog/icons", "WindowDialog/styles" ]
 
