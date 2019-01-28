@@ -33,4 +33,5 @@ MouseRightClick=[ Object(InputEventMouseButton,"resource_local_to_scene":false,"
 
 [rendering]
 
+quality/filters/msaa=4
 environment/default_environment="res://default_env.tres"

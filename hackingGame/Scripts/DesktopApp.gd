@@ -5,29 +5,42 @@ var m_IsPressed = false
 
 func _ready():
 	$Label.max_lines_visible = 1
-	$Area2D/Hover.visible = false
+	$Hover.visible = false
 
-func InputEventArea2D(viewport, event, shape_idx):
-	get_tree().set_input_as_handled()
+func ButtonPressed(event):
 	if event.is_action_pressed("MouseLeftClick"):
-		$Label.max_lines_visible = 3
-		m_IsPressed = true
-		$Area2D/Hover.visible = true
+		if event.doubleclick:
+			print("double click")
+		var apps = get_parent().get_children()
+		for app in apps:
+			if app != self:
+				app.SetIsPressed(false)
+		SetIsPressed(true)
 
-
-func MouseEnterArea2d():
-	print("Entered")
+func MouseEnter():
 	if m_IsPressed != true:
-		$Area2D/Hover.visible = true
+		$Hover.visible = true
 
 
-func MouseExitArea2D():
+func MouseExit():
 	if m_IsPressed != true:
-		$Area2D/Hover.visible = false
+		$Hover.visible = false
 
 func IsPressed():
 	return m_IsPressed
 
 func SetIsPressed(value):
 	m_IsPressed = value
-	$Area2D/Hover.visible = false
+	$Hover.visible = value
+	if value == true:
+		$Label.max_lines_visible = 3
+
+func InputPressed(event):
+	if event.is_action_pressed("MouseLeftClick"):
+		if event.doubleclick:
+			print("double click")
+		var apps = get_parent().get_children()
+		for app in apps:
+			if app != self:
+				app.SetIsPressed(false)
+		SetIsPressed(true)

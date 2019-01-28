@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://GFX/background_1.png" type="Texture" id=1]
-[ext_resource path="res://Scripts/Apps.gd" type="Script" id=2]
+[ext_resource path="res://Scripts/AppsUnclick.gd" type="Script" id=2]
 [ext_resource path="res://Objects/RecycleBin.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Objects/InternetBrowser.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Objects/Mail.tscn" type="PackedScene" id=5]
@@ -9,7 +9,7 @@
 [ext_resource path="res://Objects/VisualScriptStudio.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Objects/PoodleMaps.tscn" type="PackedScene" id=8]
 
-[node name="Main" type="Node"]
+[node name="Main" type="Node" index="0"]
 
 [node name="Background" type="Sprite" parent="." index="0"]
 
@@ -18,32 +18,69 @@ texture = ExtResource( 1 )
 centered = false
 _sections_unfolded = [ "Transform" ]
 
-[node name="Apps" type="Node" parent="." index="1"]
+[node name="Margins" type="MarginContainer" parent="." index="1"]
 
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/margin_right = 4
+custom_constants/margin_top = 4
+custom_constants/margin_left = 4
+custom_constants/margin_bottom = 4
+
+[node name="Apps" type="GridContainer" parent="Margins" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 4.0
+margin_top = 4.0
+margin_right = 1276.0
+margin_bottom = 716.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+columns = 1
 script = ExtResource( 2 )
 
-[node name="RecycleBin" parent="Apps" index="0" instance=ExtResource( 3 )]
+[node name="RecycleBin" parent="Margins/Apps" index="0" instance=ExtResource( 3 )]
 
-position = Vector2( 30, 25 )
+[node name="InternetBrowser" parent="Margins/Apps" index="1" instance=ExtResource( 4 )]
 
-[node name="InternetBrowser" parent="Apps" index="1" instance=ExtResource( 4 )]
+margin_top = 72.0
+margin_bottom = 140.0
 
-position = Vector2( 30, 100 )
+[node name="Mail" parent="Margins/Apps" index="2" instance=ExtResource( 5 )]
 
-[node name="Mail" parent="Apps" index="2" instance=ExtResource( 5 )]
+margin_top = 144.0
+margin_bottom = 212.0
 
-position = Vector2( 30, 175 )
+[node name="Cmd" parent="Margins/Apps" index="3" instance=ExtResource( 6 )]
 
-[node name="Cmd" parent="Apps" index="3" instance=ExtResource( 6 )]
+margin_top = 216.0
+margin_bottom = 284.0
 
-position = Vector2( 30, 250 )
+[node name="VisualScriptStudio" parent="Margins/Apps" index="4" instance=ExtResource( 7 )]
 
-[node name="VisualScriptStudio" parent="Apps" index="4" instance=ExtResource( 7 )]
+margin_top = 288.0
+margin_bottom = 356.0
 
-position = Vector2( 30, 325 )
+[node name="PoodleMaps" parent="Margins/Apps" index="5" instance=ExtResource( 8 )]
 
-[node name="PoodleMaps" parent="Apps" index="5" instance=ExtResource( 8 )]
+margin_top = 360.0
+margin_bottom = 428.0
 
-position = Vector2( 30, 400 )
+[connection signal="gui_input" from="Margins/Apps" to="Margins/Apps" method="AppsGUIInput"]
 
 

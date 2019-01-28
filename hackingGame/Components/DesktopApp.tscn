@@ -1,58 +1,84 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://Scripts/DesktopApp.gd" type="Script" id=1]
-[ext_resource path="res://GFX/hoverAppHighlight.png" type="Texture" id=2]
-[ext_resource path="res://GFX/icon.png" type="Texture" id=3]
-[ext_resource path="res://Themes/BaseTheme.tres" type="Theme" id=4]
-[ext_resource path="res://fonts/Montserrat-Regular.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://Themes/Parts/ButtonNormal.tres" type="StyleBox" id=1]
+[ext_resource path="res://Scripts/DesktopApp.gd" type="Script" id=2]
+[ext_resource path="res://GFX/hoverAppHighlight.png" type="Texture" id=3]
+[ext_resource path="res://icon.png" type="Texture" id=4]
+[ext_resource path="res://Themes/BaseTheme.tres" type="Theme" id=5]
 
-[sub_resource type="RectangleShape2D" id=1]
+[node name="DesktopApp" type="Button"]
 
-custom_solver_bias = 0.0
-extents = Vector2( 34.408, 33.9556 )
-
-[sub_resource type="DynamicFont" id=2]
-
-size = 12
-use_mipmaps = false
-use_filter = false
-font_data = ExtResource( 5 )
-_sections_unfolded = [ "Font", "Settings" ]
-
-[node name="DesktopApp" type="Node2D" index="0"]
-
-scale = Vector2( 0.6, 0.6 )
-script = ExtResource( 1 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 54.0
+margin_bottom = 68.0
+rect_min_size = Vector2( 54, 68 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_styles/hover = ExtResource( 1 )
+custom_styles/pressed = ExtResource( 1 )
+custom_styles/normal = ExtResource( 1 )
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+flat = false
+align = 1
+script = ExtResource( 2 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Area2D" type="Area2D" parent="." index="0"]
+[node name="Hover" type="NinePatchRect" parent="." index="0"]
 
-position = Vector2( 0.0633092, 26.1738 )
-scale = Vector2( 1.31966, 1.81793 )
-input_pickable = true
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-audio_bus_override = false
-audio_bus_name = "Master"
-_sections_unfolded = [ "Collision", "Pickable" ]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" index="0"]
-
-shape = SubResource( 1 )
-
-[node name="Hover" type="Sprite" parent="Area2D" index="1"]
-
-show_behind_parent = true
-position = Vector2( 0.101772, 0.164236 )
-scale = Vector2( 1.06512, 1.05595 )
-texture = ExtResource( 2 )
-_sections_unfolded = [ "Visibility" ]
-
-[node name="Icon" type="Sprite" parent="." index="1"]
-
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 108.0
+margin_bottom = 136.0
+rect_min_size = Vector2( 108, 136 )
+rect_scale = Vector2( 0.5, 0.5 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
 texture = ExtResource( 3 )
+patch_margin_left = 2
+patch_margin_top = 2
+patch_margin_right = 2
+patch_margin_bottom = 2
+_sections_unfolded = [ "Margin", "Rect" ]
+
+[node name="Icon" type="TextureRect" parent="." index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 8.0
+margin_top = 2.0
+margin_right = 84.0
+margin_bottom = 78.0
+rect_min_size = Vector2( 76, 76 )
+rect_scale = Vector2( 0.5, 0.5 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 4 )
+expand = true
+stretch_mode = 0
+_sections_unfolded = [ "Margin", "Rect", "Textures" ]
 
 [node name="Label" type="Label" parent="." index="2"]
 
@@ -60,31 +86,34 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = -45.0
-margin_top = 34.0
-margin_right = 45.0
-margin_bottom = 88.0
-rect_min_size = Vector2( 64, 50 )
+margin_top = 41.0
+margin_right = 108.0
+margin_bottom = 95.0
+rect_min_size = Vector2( 108, 54 )
+rect_scale = Vector2( 0.5, 0.5 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = true
 mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-theme = ExtResource( 4 )
-custom_fonts/font = SubResource( 2 )
+theme = ExtResource( 5 )
 text = "Default app text goes here and clips after 3 lines hopefully if its works"
 align = 1
 autowrap = true
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = 3
-_sections_unfolded = [ "Theme" ]
+_sections_unfolded = [ "Rect", "Size Flags", "Theme" ]
 
-[connection signal="input_event" from="Area2D" to="." method="InputEventArea2D"]
+[connection signal="gui_input" from="." to="." method="InputPressed"]
 
-[connection signal="mouse_entered" from="Area2D" to="." method="MouseEnterArea2d"]
+[connection signal="mouse_entered" from="." to="." method="MouseEnter"]
 
-[connection signal="mouse_exited" from="Area2D" to="." method="MouseExitArea2D"]
+[connection signal="mouse_exited" from="." to="." method="MouseExit"]
+
+[connection signal="mouse_entered" from="Icon" to="." method="MouseEnter"]
+
+[connection signal="mouse_exited" from="Icon" to="." method="MouseExit"]
 
 
