@@ -13,7 +13,6 @@
 
 [node name="Background" type="Sprite" parent="." index="0"]
 
-scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 1 )
 centered = false
 _sections_unfolded = [ "Transform" ]
@@ -34,6 +33,7 @@ custom_constants/margin_right = 4
 custom_constants/margin_top = 4
 custom_constants/margin_left = 4
 custom_constants/margin_bottom = 4
+_sections_unfolded = [ "Margin", "Rect" ]
 
 [node name="Apps" type="GridContainer" parent="Margins" index="0"]
 
@@ -43,8 +43,8 @@ anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 4.0
 margin_top = 4.0
-margin_right = 1276.0
-margin_bottom = 716.0
+margin_right = 2556.0
+margin_bottom = 1436.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -53,33 +53,42 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 columns = 1
 script = ExtResource( 2 )
+_sections_unfolded = [ "Rect" ]
 
 [node name="RecycleBin" parent="Margins/Apps" index="0" instance=ExtResource( 3 )]
 
+margin_right = 108.0
+margin_bottom = 142.0
+
 [node name="InternetBrowser" parent="Margins/Apps" index="1" instance=ExtResource( 4 )]
 
-margin_top = 72.0
-margin_bottom = 140.0
+margin_top = 146.0
+margin_right = 108.0
+margin_bottom = 288.0
 
 [node name="Mail" parent="Margins/Apps" index="2" instance=ExtResource( 5 )]
 
-margin_top = 144.0
-margin_bottom = 212.0
+margin_top = 292.0
+margin_right = 108.0
+margin_bottom = 434.0
 
 [node name="Cmd" parent="Margins/Apps" index="3" instance=ExtResource( 6 )]
 
-margin_top = 216.0
-margin_bottom = 284.0
+margin_top = 438.0
+margin_right = 108.0
+margin_bottom = 580.0
 
 [node name="VisualScriptStudio" parent="Margins/Apps" index="4" instance=ExtResource( 7 )]
 
-margin_top = 288.0
-margin_bottom = 356.0
+margin_top = 584.0
+margin_right = 108.0
+margin_bottom = 726.0
 
 [node name="PoodleMaps" parent="Margins/Apps" index="5" instance=ExtResource( 8 )]
 
-margin_top = 360.0
-margin_bottom = 428.0
+margin_top = 730.0
+margin_right = 108.0
+margin_bottom = 872.0
 
 [connection signal="gui_input" from="Margins/Apps" to="Margins/Apps" method="AppsGUIInput"]
 

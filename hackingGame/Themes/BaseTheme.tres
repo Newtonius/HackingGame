@@ -13,7 +13,7 @@
 
 [sub_resource type="DynamicFont" id=1]
 
-size = 12
+size = 14
 use_mipmaps = false
 use_filter = true
 font_data = ExtResource( 6 )
@@ -21,11 +21,11 @@ _sections_unfolded = [ "Settings" ]
 
 [sub_resource type="DynamicFont" id=2]
 
-size = 10
+size = 16
 use_mipmaps = false
 use_filter = true
 font_data = ExtResource( 6 )
-_sections_unfolded = [ "Settings" ]
+_sections_unfolded = [ "Font", "Settings" ]
 
 [resource]
 
@@ -72,13 +72,13 @@ ToolButton/styles/hover = ExtResource( 3 )
 ToolButton/styles/normal = ExtResource( 4 )
 ToolButton/styles/pressed = ExtResource( 5 )
 WindowDialog/colors/title_color = Color( 0, 0, 0, 1 )
-WindowDialog/constants/close_h_ofs = 16
-WindowDialog/constants/close_v_ofs = 16
+WindowDialog/constants/close_h_ofs = 36
+WindowDialog/constants/close_v_ofs = 32
 WindowDialog/constants/scaleborder_size = 4
-WindowDialog/constants/title_height = 18
+WindowDialog/constants/title_height = 40
 WindowDialog/fonts/title_font = SubResource( 2 )
 WindowDialog/icons/close = ExtResource( 7 )
 WindowDialog/icons/close_highlight = ExtResource( 8 )
 WindowDialog/styles/panel = ExtResource( 9 )
-_sections_unfolded = [ "WindowDialog", "WindowDialog/colors", "WindowDialog/constants", "WindowDialog/icons", "WindowDialog/styles" ]
+_sections_unfolded = [ "Label", "Label/fonts", "WindowDialog", "WindowDialog/colors", "WindowDialog/constants", "WindowDialog/fonts", "WindowDialog/icons", "WindowDialog/styles" ]
 
