@@ -1,23 +1,25 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Scripts/GraphicsMenu.gd" type="Script" id=1]
-[ext_resource path="res://fonts/Montserrat-Regular.ttf" type="DynamicFontData" id=2]
-[ext_resource path="res://GFX/Buttons/backNormal.png" type="Texture" id=3]
-[ext_resource path="res://GFX/Buttons/backHover.png" type="Texture" id=4]
+[ext_resource path="res://fonts/DynamicFont.tres" type="DynamicFont" id=2]
+[ext_resource path="res://fonts/Montserrat-Regular.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://GFX/Buttons/backNormal.png" type="Texture" id=4]
+[ext_resource path="res://GFX/Buttons/backHover.png" type="Texture" id=5]
 
 [sub_resource type="DynamicFont" id=1]
 
 size = 30
 use_mipmaps = false
 use_filter = false
-font_data = ExtResource( 2 )
+font_data = ExtResource( 3 )
 _sections_unfolded = [ "Extra Spacing", "Font", "Settings" ]
 
-[node name="Node" type="Node" index="0"]
+[node name="Node" type="Node"]
 
 script = ExtResource( 1 )
 display_path = NodePath("Display/DisplayOptions")
 res_path = NodePath("Resolution/ResolutionOptions")
+msaa_path = null
 
 [node name="Display" type="Label" parent="." index="0"]
 
@@ -25,22 +27,22 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 120.0
-margin_top = 80.0
-margin_right = 240.0
-margin_bottom = 120.0
+margin_left = 320.0
+margin_top = 40.0
+margin_right = 463.0
+margin_bottom = 85.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = ExtResource( 2 )
 text = "Display:"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
-_sections_unfolded = [ "custom_fonts" ]
+_sections_unfolded = [ "Theme", "custom_fonts" ]
 
 [node name="DisplayOptions" type="OptionButton" parent="Display" index="0"]
 
@@ -48,8 +50,8 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 440.0
-margin_right = 680.0
+margin_left = 280.0
+margin_right = 520.0
 margin_bottom = 40.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -74,10 +76,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 120.0
-margin_top = 200.0
-margin_right = 292.0
-margin_bottom = 240.0
+margin_left = 320.0
+margin_top = 160.0
+margin_right = 492.0
+margin_bottom = 200.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
@@ -97,8 +99,8 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 440.0
-margin_right = 680.0
+margin_left = 280.0
+margin_right = 520.0
 margin_bottom = 40.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -117,16 +119,65 @@ align = 0
 items = [  ]
 selected = -1
 
-[node name="VSync" type="Label" parent="." index="2"]
+[node name="MSAA" type="Label" parent="." index="2"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 120.0
-margin_top = 400.0
-margin_right = 292.0
-margin_bottom = 440.0
+margin_left = 320.0
+margin_top = 320.0
+margin_right = 463.0
+margin_bottom = 365.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 2 )
+text = "MSAA"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Theme", "custom_fonts" ]
+
+[node name="MSAAOptions" type="OptionButton" parent="MSAA" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 280.0
+margin_right = 520.0
+margin_bottom = 40.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+action_mode = 0
+enabled_focus_mode = 2
+shortcut = null
+group = null
+flat = false
+align = 0
+items = [  ]
+selected = -1
+
+[node name="VSync" type="Label" parent="." index="3"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 320.0
+margin_top = 440.0
+margin_right = 492.0
+margin_bottom = 480.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
@@ -146,8 +197,8 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 440.0
-margin_right = 516.0
+margin_left = 280.0
+margin_right = 356.0
 margin_bottom = 40.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -163,15 +214,15 @@ group = null
 flat = false
 align = 0
 
-[node name="BackButton" type="TextureButton" parent="." index="3"]
+[node name="BackButton" type="TextureButton" parent="." index="4"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 520.0
+margin_left = 480.0
 margin_top = 560.0
-margin_right = 840.0
+margin_right = 800.0
 margin_bottom = 640.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -184,13 +235,15 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-texture_normal = ExtResource( 3 )
-texture_hover = ExtResource( 4 )
+texture_normal = ExtResource( 4 )
+texture_hover = ExtResource( 5 )
 _sections_unfolded = [ "Textures" ]
 
 [connection signal="item_selected" from="Display/DisplayOptions" to="." method="_on_DisplayOptions_item_selected"]
 
 [connection signal="item_selected" from="Resolution/ResolutionOptions" to="." method="_on_ResolutionOptions_item_selected"]
+
+[connection signal="item_selected" from="MSAA/MSAAOptions" to="." method="_on_MSAAOptions_item_selected"]
 
 [connection signal="toggled" from="VSync/VSyncOption" to="." method="_on_VSyncOption_toggled"]
 
